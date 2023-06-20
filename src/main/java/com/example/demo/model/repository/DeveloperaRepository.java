@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface DeveloperaRepository extends JpaRepository<DeveloperaEntity, Integer> {
 
     DeveloperaEntity findAllBydocDev(String docDev);
-    
+
 
 }

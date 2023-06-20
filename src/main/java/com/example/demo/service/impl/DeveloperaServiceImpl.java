@@ -31,12 +31,13 @@ public class DeveloperaServiceImpl implements IDeveloperaService {
 
         DeveloperaEntity developerdb = developeraRepository.findAllBydocDev(developeraEntity.getDocDev());
         if(Objects.isNull(developerdb)){
-            if(developeraEntity.getPorcHabilidad()>0 && developeraEntity.getPorcHabilidad()<100){
+            if(developeraEntity.getPorcHabilidad()>0 && developeraEntity.getPorcHabilidad()<=100){
                 developeraEntity.setPorcHabilidad(developeraEntity.getPorcHabilidad());
                 developeraRepository.save(developeraEntity);
             }else{
                 mensaje="El porcentaje no es correcto";
                 return ResponseEntity.status(HttpStatus.CREATED).body(mensaje);
+
             }
             mensaje="Desarrollador guardado exitosamente";
         }else{
