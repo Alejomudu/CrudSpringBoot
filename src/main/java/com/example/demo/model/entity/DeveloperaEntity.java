@@ -27,7 +27,7 @@ public class DeveloperaEntity {
     private String docDev;
 
     @Column(name = "lenguaje_prog")
-    private String lenguajeProgramcion;
+    private String lenguajeProgramacion;
 
     @Column(name = "porcentaje_habilidad")
     private int porcHabilidad;
